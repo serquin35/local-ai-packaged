@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+node_modules
+*.md
+assets
+flowise
+searxng
+n8n-tool-workflows
