@@ -4,10 +4,6 @@ FROM n8nio/n8n:1.90.0
 # Establecer el directorio de trabajo
 WORKDIR /home/node
 
-# Copiar archivos de configuración de n8n (si los tienes)
-# Comenta esta línea si no tienes configuraciones personalizadas
-COPY n8n/.n8n /home/node/.n8n
-
 # Exponer el puerto predeterminado de n8n
 EXPOSE 5678
 
