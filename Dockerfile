@@ -1,5 +1,5 @@
-# Usar la imagen oficial de n8n versión 1.86.1
-FROM n8nio/n8n:1.90.0
+# Usar la imagen oficial de n8n (versión más reciente)
+FROM n8nio/n8n:latest
 
 # Establecer el directorio de trabajo
 WORKDIR /home/node
@@ -13,7 +13,7 @@ ENV N8N_HOST=0.0.0.0
 ENV N8N_PROTOCOL=http
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
-# La contraseña se configurará como secreto en Fly.io
 
-# Iniciar n8n
+# Usar el script de entrada oficial para iniciar n8n
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["n8n", "start"]
